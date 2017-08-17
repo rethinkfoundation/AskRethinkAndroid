@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "302896492789",
+    "firebase_url": "https://rethinkama.firebaseio.com",
+    "project_id": "rethinkama",
+    "storage_bucket": "rethinkama.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302896492789:android:ed60b672953a0215",
+        "android_client_info": {
+          "package_name": "com.rethink.ama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302896492789-4iga6m6j78v1u1k6a2ki1co4gjiu5trp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb0svgmsBvjFUVOXwSFFTIk1w_UACVbzQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302896492789-4iga6m6j78v1u1k6a2ki1co4gjiu5trp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

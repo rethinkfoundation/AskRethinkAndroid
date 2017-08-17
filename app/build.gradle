@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+
+android {
+    signingConfigs {
+        rethinkama {
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.rethink.ama"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.rethinkama
+            debuggable false
+            jniDebuggable false
+        }
+    }
+}
+
+dependencies {
+    apk files('libs/activation.jar')
+    apk files('libs/additional.jar')
+    apk files('libs/mail.jar')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile('com.google.apis:google-api-services-gmail:v1-rev65-1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    compile project(path: ':overlaylibrary')
+    compile 'com.github.fcannizzaro:material-stepper:1.2.2'
+    compile 'com.google.android.gms:play-services-analytics:10.2.4'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.google.android.gms:play-services-auth:10.2.4'
+    compile 'com.google.api-client:google-api-client-gson:1.20.0'
+    compile 'pub.devrel:easypermissions:0.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.webianks.library:easy-feedback:1.0.2'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
