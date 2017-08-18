@@ -1,5 +1,4 @@
-package com.rethink.mailappnew.app;
-
+package com.rethink.ask.app;
 
 import android.app.Application;
 
@@ -7,20 +6,11 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.rethink.ama.R;
 
-
-
-
-
-
 /**
  * This is a subclass of {@link Application} used to provide shared objects for this app, such as
  * the {@link Tracker}.
  */
-
-public class MailApplication extends Application {
-
-
-
+public class RethinkApplication extends Application {
     private static GoogleAnalytics sAnalytics;
     private static Tracker sTracker;
 
@@ -30,15 +20,11 @@ public class MailApplication extends Application {
         sAnalytics = GoogleAnalytics.getInstance(this);
     }
 
-
     /**
      * Gets the default {@link Tracker} for this {@link Application}.
      *
-     *
      * @return tracker
      */
-
-
     synchronized public Tracker getDefaultTracker() {
         // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
 

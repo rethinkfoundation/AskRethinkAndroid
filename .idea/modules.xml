@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MailApp.iml" filepath="$PROJECT_DIR$/MailApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/MailAppNew.iml" filepath="$PROJECT_DIR$/MailAppNew.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RethinkAMA.iml" filepath="$PROJECT_DIR$/RethinkAMA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RethinkAndroidApp.iml" filepath="$PROJECT_DIR$/RethinkAndroidApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/newapp.iml" filepath="$PROJECT_DIR$/newapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/OverlayLibrary/overlaylibrary.iml" filepath="$PROJECT_DIR$/OverlayLibrary/overlaylibrary.iml" />

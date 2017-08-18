@@ -9,14 +9,14 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
-        android:name="com.rethink.mailappnew.app.MailApplication"
+        android:name="com.rethink.ask.app.RethinkApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.rethink.mailappnew.ui.SplashScreen"
+            android:name="com.rethink.ask.ui.SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,17 +26,12 @@
             >
         </activity>
         <activity
-            android:name="com.rethink.mailappnew.ui.PrimaryActivity"
+            android:name="com.rethink.ask.ui.PrimaryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.rethink.mailappnew.ui.PreferenceActivity"
+            android:name="com.rethink.ask.ui.ProfileActivity"
             android:label="@string/title_activity_preference"
-            android:parentActivityName="com.rethink.mailappnew.ui.PrimaryActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.rethink.mailappnew.ui.ContactListing"
-            android:label="@string/title_activity_contact_listing"
-            android:parentActivityName="com.rethink.mailappnew.ui.PrimaryActivity"
+            android:parentActivityName="com.rethink.ask.ui.PrimaryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

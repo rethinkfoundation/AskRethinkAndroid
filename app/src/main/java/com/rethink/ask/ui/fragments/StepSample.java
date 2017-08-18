@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.ui.fragments;
+package com.rethink.ask.ui.fragments;
 
 import android.os.Bundle;
 import android.text.Html;
@@ -16,8 +16,6 @@ import com.rethink.ama.R;
  * Created by Shibin.co on 12/06/17.
  */
 
-
-
 public class StepSample extends AbstractStep {
 
     private static final String TAG = "Step Sample";
@@ -31,12 +29,9 @@ public class StepSample extends AbstractStep {
 
         View v = inflater.inflate(R.layout.step, container, false);
         button = (Button) v.findViewById(R.id.button);
-
         if (savedInstanceState != null)
             i = savedInstanceState.getInt(CLICK, 0);
-
         button.setText(Html.fromHtml("Tap <b>" + i + "</b>"));
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.ui;
+package com.rethink.ask.ui;
 
 import android.Manifest;
 import android.accounts.AccountManager;
@@ -40,10 +40,10 @@ import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.client.util.ExponentialBackOff;
 import com.google.api.services.gmail.GmailScopes;
 import com.rethink.ama.R;
-import com.rethink.mailappnew.app.MailApplication;
-import com.rethink.mailappnew.app.PreferensHandler;
-import com.rethink.mailappnew.controller.db.DBManager;
-import com.rethink.mailappnew.controller.mail.GmailUtil;
+import com.rethink.ask.app.RethinkApplication;
+import com.rethink.ask.app.PreferensHandler;
+import com.rethink.ask.controller.db.DBManager;
+import com.rethink.ask.controller.mail.GmailUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -97,7 +97,7 @@ public class PrimaryActivity extends AppCompatActivity implements EasyPermission
         c = getApplicationContext();
         pref = new PreferensHandler(c);
 
-        MailApplication application = (MailApplication) getApplication();
+        RethinkApplication application = (RethinkApplication) getApplication();
         mTracker = application.getDefaultTracker();
 
         queryEditText = (EditText) findViewById(R.id.queryedittext);
@@ -505,7 +505,7 @@ public class PrimaryActivity extends AppCompatActivity implements EasyPermission
         int id = item.getItemId();
 
         if (id == R.id.option_preference) {
-            Intent prefActivity = new Intent(PrimaryActivity.this, PreferenceActivity.class);
+            Intent prefActivity = new Intent(PrimaryActivity.this, ProfileActivity.class);
             startActivity(prefActivity);
         }
         return super.onOptionsItemSelected(item);

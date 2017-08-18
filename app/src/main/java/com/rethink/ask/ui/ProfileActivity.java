@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.ui;
+package com.rethink.ask.ui;
 
 import android.Manifest;
 import android.accounts.AccountManager;
@@ -26,14 +26,14 @@ import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccoun
 import com.google.api.client.util.ExponentialBackOff;
 import com.google.api.services.gmail.GmailScopes;
 import com.rethink.ama.R;
-import com.rethink.mailappnew.app.PreferensHandler;
+import com.rethink.ask.app.PreferensHandler;
 
 import java.util.Arrays;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
-public class PreferenceActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     static final int REQUEST_ACCOUNT_PICKER = 1000;
     static final int REQUEST_AUTHORIZATION = 1001;
@@ -122,7 +122,7 @@ public class PreferenceActivity extends AppCompatActivity {
                 if(count == 4) {
                     if (!pref.getFirstOpen()) {
                         pref.setFirstOpen();
-                        Intent i = new Intent(PreferenceActivity.this, PrimaryActivity.class);
+                        Intent i = new Intent(ProfileActivity.this, PrimaryActivity.class);
                         startActivity(i);
                         finish();
                     } else {
@@ -166,7 +166,7 @@ public class PreferenceActivity extends AppCompatActivity {
         } else if (mCredential.getSelectedAccountName() == null) {
             chooseAccount();
         } else if (!isDeviceOnline()) {
-            Toast.makeText(PreferenceActivity.this, "No network connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ProfileActivity.this, "No network connection", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -196,7 +196,7 @@ public class PreferenceActivity extends AppCompatActivity {
             final int connectionStatusCode) {
         GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
         Dialog dialog = apiAvailability.getErrorDialog(
-                PreferenceActivity.this,
+                ProfileActivity.this,
                 connectionStatusCode,
                 REQUEST_GOOGLE_PLAY_SERVICES);
         dialog.show();
@@ -282,35 +282,4 @@ public class PreferenceActivity extends AppCompatActivity {
 
         }
     }
-
-
-
-   /* @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.preference_activity_menu, menu);
-
-            return true;
-        }
-
-
-
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-
-            if (id == R.id.feedback_action_settings) {
-                new EasyFeedback.Builder(this)
-                        .withEmail("shibinazx@gmail.com")
-                        .withSystemInfo()
-                        .build()
-                        .start();
-
-                Log.e("Feedback", "Easy Feedback Start");
-               *//* Intent prefActivity = new Intent(PreferenceActivity.this, PreferenceActivity.class);
-                startActivity(prefActivity);*//*
-            }
-            return super.onOptionsItemSelected(item);
-        }*/
-
 }

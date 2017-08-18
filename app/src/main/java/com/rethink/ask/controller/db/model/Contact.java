@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.controller.db.model;
+package com.rethink.ask.controller.db.model;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

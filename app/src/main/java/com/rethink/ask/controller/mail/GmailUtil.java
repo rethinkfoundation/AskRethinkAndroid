@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.controller.mail;
+package com.rethink.ask.controller.mail;
 
 
 import android.util.Log;
@@ -25,7 +25,6 @@ import javax.mail.internet.MimeMultipart;
 
 public class GmailUtil {
     private static final String TAG = "MailApp";
-
     /**
      * Create a MimeMessage using the parameters provided.
      *
@@ -44,9 +43,7 @@ public class GmailUtil {
 
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
-
         MimeMessage email = new MimeMessage(session);
-
         email.setFrom(new InternetAddress(from));
         email.addRecipient(javax.mail.Message.RecipientType.TO,
                 new InternetAddress(to));
@@ -58,7 +55,6 @@ public class GmailUtil {
         email.setText(bodyText);
         return email;
     }
-
 
     public static MimeMessage createEmailWithAttachment(String from, String to, String bcc, String subject,
                                                         String bodyText, String filePath, String fileName) throws MessagingException {
@@ -67,9 +63,7 @@ public class GmailUtil {
 
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
-
         MimeMessage email = new MimeMessage(session);
-
         email.setFrom(new InternetAddress(from));
         email.addRecipient(javax.mail.Message.RecipientType.TO,
                 new InternetAddress(to));
@@ -79,20 +73,15 @@ public class GmailUtil {
         }
         email.setSubject(subject);
         email.setText(bodyText);
-
         Multipart multipart = new MimeMultipart();
-
         MimeBodyPart messageBodyPart = new MimeBodyPart();
         DataSource source = new FileDataSource(filePath);
         messageBodyPart.setDataHandler(new DataHandler(source));
         messageBodyPart.setFileName(fileName);
         multipart.addBodyPart(messageBodyPart);
-
         email.setContent(multipart);
-
         return email;
     }
-
 
     /**
      * Create a Message from an email

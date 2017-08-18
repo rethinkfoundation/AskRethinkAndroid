@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.ui;
+package com.rethink.ask.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.rethink.ama.R;
-import com.rethink.mailappnew.app.PreferensHandler;
+import com.rethink.ask.app.PreferensHandler;
 
 public class SplashScreen extends Activity {
 
@@ -33,7 +33,7 @@ public class SplashScreen extends Activity {
                     Intent i = new Intent(SplashScreen.this, PrimaryActivity.class);
                     startActivity(i);
                 } else {
-                    Intent i = new Intent(SplashScreen.this, PreferenceActivity.class);
+                    Intent i = new Intent(SplashScreen.this, ProfileActivity.class);
                     startActivity(i);
                 }
 

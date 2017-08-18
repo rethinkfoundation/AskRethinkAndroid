@@ -1,8 +1,8 @@
-package com.rethink.mailappnew.controller.db;
+package com.rethink.ask.controller.db;
 
 import android.content.Context;
 import android.util.Log;
-import com.rethink.mailappnew.controller.db.model.Contact;
+import com.rethink.ask.controller.db.model.Contact;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.exceptions.RealmPrimaryKeyConstraintException;

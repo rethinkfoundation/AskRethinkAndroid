@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.controller.mail;
+package com.rethink.ask.controller.mail;
 
 import com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64;
 

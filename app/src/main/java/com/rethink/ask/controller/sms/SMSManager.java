@@ -1,4 +1,4 @@
-package com.rethink.mailappnew.controller.sms;
+package com.rethink.ask.controller.sms;
 
 /**
  * Created by zac on 31/05/17.
