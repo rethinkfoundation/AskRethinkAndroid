@@ -34,5 +34,9 @@
         <item name="android:textColor">@color/Pink</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash_xml</item>
+    </style>
+
 
 </resources>

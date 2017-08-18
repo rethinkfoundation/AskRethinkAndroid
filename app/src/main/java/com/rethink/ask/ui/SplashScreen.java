@@ -5,18 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.rethink.ama.R;
 import com.rethink.ask.app.PreferensHandler;
 
 public class SplashScreen extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 500;
+    private static int SPLASH_TIME_OUT = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        //setContentView(R.layout.activity_splash_screen);
 
         new Handler().postDelayed(new Runnable() {
 
