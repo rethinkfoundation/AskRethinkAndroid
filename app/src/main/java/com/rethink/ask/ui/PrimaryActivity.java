@@ -70,7 +70,7 @@ public class PrimaryActivity extends AppCompatActivity implements EasyPermission
     static final int REQUEST_PERMISSION_GET_ACCOUNTS = 1003;
 
     private String data;
-    private String to = "office@rethinkfoundation.in";
+    private String to = "volunteers@rethinkfoundation.in";
 
     private EditText queryEditText;
     private Button sendButton, clearButton, testButton;
@@ -387,7 +387,7 @@ public class PrimaryActivity extends AppCompatActivity implements EasyPermission
                 message = message + pref.getUserName().trim() + "\n" + pref.getUserCollege().trim() + "\n" + pref.getUserBranch().trim() + ", " + pref.getUserYear().trim();
 
                 GmailUtil.sendMessage(mService, "me",
-                        GmailUtil.createEmail(pref.getUserName() + " <" + pref.getUserEmail() + ">", "office@rethinkfoundation.in", pref.getUserEmail(), subject, message));
+                        GmailUtil.createEmail(pref.getUserName() + " <" + pref.getUserEmail() + ">", to, pref.getUserEmail(), subject, message));
 
 
             } catch (Exception e) {
