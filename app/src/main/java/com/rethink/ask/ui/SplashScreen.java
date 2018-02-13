@@ -29,7 +29,7 @@ public class SplashScreen extends Activity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
                 if (new PreferensHandler(SplashScreen.this).getFirstOpen()) {
-                    Intent i = new Intent(SplashScreen.this, PrimaryActivity.class);
+                    Intent i = new Intent(SplashScreen.this, DiscoveryActivity.class);
                     startActivity(i);
                 } else {
                     Intent i = new Intent(SplashScreen.this, ProfileActivity.class);

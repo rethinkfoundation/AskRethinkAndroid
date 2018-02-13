@@ -25,6 +25,10 @@
         <activity
             android:name="com.rethink.ask.ui.PrimaryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.rethink.ask.ui.DiscoveryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.rethink.ask.ui.ProfileActivity"
             android:label="@string/title_activity_preference"

@@ -62,6 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Your Profile");
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -122,7 +123,7 @@ public class ProfileActivity extends AppCompatActivity {
                 if(count == 4) {
                     if (!pref.getFirstOpen()) {
                         pref.setFirstOpen();
-                        Intent i = new Intent(ProfileActivity.this, PrimaryActivity.class);
+                        Intent i = new Intent(ProfileActivity.this, DiscoveryActivity.class);
                         startActivity(i);
                         finish();
                     } else {
